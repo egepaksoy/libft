@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 11:42:16 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/06 15:20:43 by epaksoy          ###   ########.fr       */
+/*   Created: 2023/07/06 15:23:21 by epaksoy           #+#    #+#             */
+/*   Updated: 2023/07/06 16:42:43 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include    "libft.h"
 
-void    *ft_memset(void *b, int c, size_t len)
+size_t ft_strlcpy(char *dst, const char *src, size_t l)
 {
-    int n;
+    size_t n;
 
     n = 0;
-    while (len > 0)
+    while (n < (l - 1) && src[n])
     {
-        ((unsigned char *)b)[n] = ((char)c);
-        n++;
-        len--;
+        dst[n] = src[n];
+        n++;    
     }
-    return (b);
+
+    while (n < (l - 1))
+    {
+        dst[n] = src[n];
+        n++;
+    }
+
+    dst[n] = 0;
+
+    return (n);
 }

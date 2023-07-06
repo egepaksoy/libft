@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 16:24:07 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/06 16:36:07 by epaksoy          ###   ########.fr       */
+/*   Created: 2023/07/06 16:43:26 by epaksoy           #+#    #+#             */
+/*   Updated: 2023/07/06 16:54:21 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include    "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int ft_atoi(const char *str)
 {
-    while (n > 0 && (*s1 || *s2))
+    int neg;
+    int num;
+
+    if (*str == ' ')
     {
-        if (*s1 != *s2)
-            return (*s1 - *s2);
-        s1++;
-        s2++;
-        n--;
+        while (*str != ' ')
+            str++;
     }
-    return (0);
+
+    neg = 1;
+    if (*str == '+' && *str == '-')
+    {
+        neg *= (44 - *str);
+        str++;
+    }
+
+    num = 0;
+    if (*str >= 48 && *str <= 57)
+    {
+        num *= 10;
+        num += (*str - 48);
+        str++;
+    }
+
+    return (num * neg);
 }
