@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:48:48 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/05 16:22:29 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/06 17:52:07 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(char *s, int c)
+char	*ft_strrchr(char *s, int c)
 {
-    char *d;
-    while (*s)
-    {
-        if (*s == (char)c)
-            d = s;
-        s++;
-    }
-    return (d);
+	char	*d;
+
+	while (*s)
+	{
+		if (*s == (char)c)
+			d = s;
+		s++;
+	}
+	return (d);
 }
