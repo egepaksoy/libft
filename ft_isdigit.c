@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 11:07:33 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/04 11:22:45 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:42:11 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,5 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+
+// girilen char degeri rakam ise 1 donduruyor

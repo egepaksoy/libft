@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:05:04 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/07 16:01:33 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:48:25 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// herhangi veri tipinde aldıgı s1 ve s2 listelerini n. elemana kadar
+// karsılasıtırıyor eger aynı degilse aynı olmayan degerlerinin
+// farkını integer olarak donduruyor aynı ise 0 donduruyor

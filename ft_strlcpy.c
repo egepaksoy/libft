@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:23:21 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/06 17:50:30 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 20:29:29 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t l)
 		dst[n] = src[n];
 		n++;
 	}
-	while (n < (l - 1))
-	{
-		dst[n] = src[n];
-		n++;
-	}
 	dst[n] = 0;
 	return (n);
 }
+
+// dst stringinin icine src string'ini yazıyor eger src sonuna gelirse veya
+// yazması gereken tamamını yazarsa dst'in sonuna null atıp uzunlugu donduruyor

@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:43:26 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/06 17:45:51 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:38:33 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,5 @@ int	ft_atoi(const char *str)
 	}
 	return (num * neg);
 }
+
+// verilen string'i integer'a ceviriyor

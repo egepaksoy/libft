@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 11:23:20 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/04 11:25:24 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:41:13 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,5 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+
+// girilen char karakteri alfabetik degerse veya rakamsal degerse 1 donduruyor

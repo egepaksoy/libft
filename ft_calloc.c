@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 15:34:58 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/07 17:12:17 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:40:24 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(add, count * size);
 	return (add);
 }
+
+// count byte olan size uzunlugunda bir bellek alanı acıyor
+// ve bu alanı null karakterler ile dolduruyor

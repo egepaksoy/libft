@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:58:56 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/06 17:47:03 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:46:21 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*d;
+	size_t	i;
 
-	d = (unsigned char *)s;
-	while (*d && n >= 0)
+	i = 0;
+	while (i < n)
 	{
-		if (*d == (unsigned char)c)
-			return ((void *)d);
+		if ((unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s + i));
+		i++;
 	}
-	return (NULL);
+	return (0);
 }
+
+// verilen n uzunlugundaki s string'i icerisinde c char'ını arıyor 
+// bulursa buldugu adresi donduruyor

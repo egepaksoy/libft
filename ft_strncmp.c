@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 16:24:07 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/06 17:50:51 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 20:32:07 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+// verilen string'lerin n degerine kadar aynı olup olmadıgını karsılastırıyor
+// eger aynı ise 0 donduruyor degilse s1'in s2'den farkını donduruyor

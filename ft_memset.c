@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 11:42:16 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/06 17:48:01 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 20:02:19 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ void	*ft_memset(void *b, int c, size_t len)
 	n = 0;
 	while (len > n)
 	{
-		((unsigned char *)b)[n] = c;
+		*(unsigned char *)(b + n) = c;
 		n++;
 	}
 	return (b);
 }
 
-// verilen len uzunlugundaki herhangi bir veri tipindeki b dizisinin tum elemanlarini verilen c degeri ile degistiriyor
+// verilen len uzunlugundaki herhangi bir veri tipindeki b dizisinin
+// tum elemanlarini verilen c degeri ile degistiriyor

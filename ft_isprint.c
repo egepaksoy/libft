@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 11:32:52 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/04 11:35:22 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:42:24 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,5 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
+
+// girilen deger ekrana yazdırılabilir ise 1 donduruyor

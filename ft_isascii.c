@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 11:25:50 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/04 11:27:45 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/11 19:41:47 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,5 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
+
+// girilen deger aski tablosu icerisinde ise 1 donduruyor
