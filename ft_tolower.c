@@ -18,3 +18,5 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
+
+// girilen char karakteri buyuk harf ise kucultuyor

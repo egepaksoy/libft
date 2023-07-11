@@ -14,13 +14,16 @@
 
 char	*ft_strrchr(char *s, int c)
 {
-	char	*d;
+	size_t	i;
 
-	while (*s)
+	i = ft_strlen(s);
+	while (i)
 	{
-		if (*s == (char)c)
-			d = s;
-		s++;
+		if (*(s + i) == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	return (d);
+	return (0);
 }
+
+// girilen s stringi içinde sondan başlayarak c char'ını arıyor

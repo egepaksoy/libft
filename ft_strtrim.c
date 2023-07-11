@@ -18,3 +18,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	
 }
+
+// s1 dizisinin basında ve sonunda set dizisini
+// kesip yeni bir diziye kaydediyor ve onu donduruyor

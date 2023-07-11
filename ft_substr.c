@@ -24,14 +24,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (str);
 	}
 
-	else
-	{
-		if ((ft_strlen(s) - start) < len)
-			len = ft_strlen(s) - start;
-		str = (char *)malloc(sizeof(char) * len + 1);
-		if (!str)
-			return (0);
-		ft_strcpy(str, (char *)(s + start), len + 1);
-	}
+	if ((ft_strlen(s) - start) < len)
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (!str)
+		return (0);
+	ft_strlcpy(str, (char *)(s + start), len + 1);
+	
 	return (str);
 }
+
+// s dizisinin start ile len değerleri arasındaki
+// değerleri başka bir dizi oluşturup içine yazıyor
