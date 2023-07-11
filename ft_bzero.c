@@ -14,13 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*d;
-
-	d = (char *)s;
-	while (n > 0)
-	{
-		*d = 0;
-		d++;
-		n--;
-	}
+	ft_memset(s, '\0', n);
 }
+
+// verilen herhangi bir veri tipindeki n uzunlugundaki s listesinin içini null ile doldurur

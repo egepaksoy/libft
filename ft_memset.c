@@ -14,14 +14,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	int	n;
+	size_t	n;
 
 	n = 0;
-	while (len > 0)
+	while (len > n)
 	{
-		((unsigned char *)b)[n] = ((char)c);
+		((unsigned char *)b)[n] = c;
 		n++;
-		len--;
 	}
 	return (b);
 }
+
+// verilen len uzunlugundaki herhangi bir veri tipindeki b dizisinin tum elemanlarini verilen c degeri ile degistiriyor
