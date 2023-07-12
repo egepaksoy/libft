@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 19:34:29 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/10 20:49:18 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/12 16:52:39 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len;
 	char	*res;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	while (*s1 == *(set + i) && *(set + i) && *s1)
