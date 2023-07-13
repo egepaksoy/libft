@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 19:15:50 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/13 19:20:01 by epaksoy          ###   ########.fr       */
+/*   Created: 2023/07/13 19:18:02 by epaksoy           #+#    #+#             */
+/*   Updated: 2023/07/13 19:21:20 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
 
-// ft_strlen fonksiyonundan donen byte sayısı kadar
-// stringi fd descriptoru ile yazdırıyor
+// verilen s string'ini fd degeri ile yazdırır ve alt satıra iner
