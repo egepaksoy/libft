@@ -6,15 +6,15 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 16:32:05 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/12 17:58:40 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/13 19:11:20 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include	<stdlib.h>
-# include	<unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -47,6 +47,5 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
-
 
 #endif

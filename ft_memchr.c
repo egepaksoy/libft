@@ -6,11 +6,11 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:58:56 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/11 19:46:21 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/13 19:12:21 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

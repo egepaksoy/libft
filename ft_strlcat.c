@@ -6,11 +6,11 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:29:54 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/11 20:23:16 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/13 19:13:45 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

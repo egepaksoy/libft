@@ -6,11 +6,11 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 11:07:33 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/11 19:42:11 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/13 19:12:16 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

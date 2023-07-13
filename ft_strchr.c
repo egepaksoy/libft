@@ -6,11 +6,11 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 15:10:29 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/11 20:04:11 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/13 19:13:33 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
