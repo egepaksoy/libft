@@ -3,6 +3,7 @@ FLAG = -Wall -Wextra -Werror
 SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
 BONUS = $(shell find . -name "ft_lst*.c")
 OBJ = $(SRC:.c=.o)
+BONUSOBJ = $(BONUS:.c=.o)
 
 
 all: $(NAME)
@@ -11,7 +12,7 @@ $(NAME):
 	gcc $(FLAG) -c $(SRC)
 	ar rc $(NAME) *.o
 bonus:
-	gcc $(FLAG) -c $(BONUS)
+	gcc $(FLAG) -c $(BONUS) $(SRC)
 	ar rc $(NAME) *.o
 clean:
 	/bin/rm -f  *.o
