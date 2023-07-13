@@ -6,50 +6,57 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 22:50:21 by egep              #+#    #+#             */
-/*   Updated: 2023/07/13 19:13:23 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/13 19:32:16 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_arrs(char const *s, char c)
+unsigned int	str_in_array(const char *s, char delimiter)
 {
-	int	i;
-	int	count;
+	unsigned int	qnt;
 
-	i = 0;
-	count = 0;
+	qnt = 0;
 	while (*s)
 	{
-		if (*(s + i) == c)
+		if (*s == delimiter)
+			s++;
+		else
 		{
-			count++;
-			i++;
+			while (*s != delimiter && *s)
+				s++;
+			qnt++;
 		}
 	}
-	return (count++);
+	return (qnt);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		n;
-	char	**ret;
+	char			**arr;
+	unsigned int	j;
+	unsigned int	a;
 
-	i = 0;
-	n = 0;
-	ret = (char **)malloc(sizeof(char *) * (count_arrs(s, c)) + 1);
-	while (*(s + i))
+	if (!s)
+		return (NULL);
+	arr = (char **) ft_calloc(str_in_array(s, c) + 1, sizeof(char *));
+	if (!arr)
+		return (NULL);
+	a = 0;
+	while (*s)
 	{
-		if (*(s + i) == c)
+		if (*s == c)
+			s++;
+		else
 		{
-			*ret = ft_substr(s, n, i);
-			ret++;
-			n = i;
+			j = 0;
+			while (*s != c && *s && ++j)
+				s++;
+			arr[++a -1] = (char *) ft_calloc(j + 1, sizeof(char));
+			ft_strlcpy(arr[a -1], s - j, j + 1);
 		}
-		i++;
 	}
-	return (ret);
+	return (arr);
 }
 
 // verilen s stringi içerisinde c char'ına göre ayırıyor
