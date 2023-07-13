@@ -12,7 +12,7 @@ $(NAME):
 	gcc $(FLAG) -c $(SRC)
 	ar rc $(NAME) *.o
 bonus:
-	gcc $(FLAG) -c $(BONUS) $(SRC)
+	gcc $(FLAG) -c $(BONUS)
 	ar rc $(NAME) *.o
 clean:
 	/bin/rm -f  *.o
