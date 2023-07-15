@@ -6,24 +6,27 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 15:23:21 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/13 19:13:50 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/15 15:22:20 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t l)
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-	size_t	n;
+	size_t	i;
 
-	n = 0;
-	while (n < (l - 1) && src[n])
+	i = 0;
+	if (n > 0)
 	{
-		dst[n] = src[n];
-		n++;
+		while (i < (n - 1) && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dst[n] = 0;
-	return (n);
+	return (ft_strlen(src));
 }
 
 // dst stringinin icine src string'ini yazıyor eger src sonuna gelirse veya

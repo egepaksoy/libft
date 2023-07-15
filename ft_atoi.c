@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:43:26 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/13 19:11:47 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/15 15:35:38 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,30 @@
 
 int	ft_atoi(const char *str)
 {
-	int	neg;
-	int	num;
+	int	d;
+	int	s;
 
-	if (*str == ' ')
+	d = 1;
+	s = 0;
+	while (*str == '\t' || *str == '\n' || *str == '\v'
+		|| *str == '\f' || *str == '\r' || *str == ' ')
+		str++;
+	if (*str == '-')
 	{
-		while (*str != ' ')
-			str++;
-	}
-	neg = 1;
-	if (*str == '+' && *str == '-')
-	{
-		neg *= (44 - *str);
+		d = d * -1;
 		str++;
 	}
-	num = 0;
-	if (*str >= 48 && *str <= 57)
+	else if (*str == '+')
+		str++;
+	if (*str == '-' || *str == '+')
+		return (0);
+	while (*str >= '0' && *str <= '9')
 	{
-		num *= 10;
-		num += (*str - 48);
+		s = (s * 10);
+		s = s + (*str - '0');
 		str++;
 	}
-	return (num * neg);
+	return (s * d);
 }
 
 // verilen string'i integer'a ceviriyor

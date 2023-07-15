@@ -6,67 +6,43 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 15:50:24 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/12 16:50:47 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/15 18:22:54 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int n)
+int	ft_numlen(int n)
 {
-	int	ret;
+	int	len;
 
-	ret = 0;
+	len = 0;
+	if (!n)
+		return (1);
 	if (n < 0)
-		ret++;
+		len++;
 	while (n)
 	{
 		n /= 10;
-		ret++;
+		len++;
 	}
-	return (ret);
-}
-
-int	ft_up(int num, int up)
-{
-	int	ret;
-
-	ret = 1;
-	while (up)
-	{
-		ret *= num;
-		up--;
-	}
-	return (ret);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*res;
+	char	*ret;
 	int		len;
-	int		i;
+	int		neg;
 
-	len = ft_intlen(n);
-	res = (char *) malloc(sizeof(char) * len + 1);
-	if (!res)
-		return (0);
-	i = 0;
+	if (n == -2147483647)
+		return ("-2147483647");
+	len = ft_numlen(n);
+	ret = (char *)malloc(sizeof(char) * len + 1);
 	if (n < 0)
 	{
-		*(res + i) = '-';
-		i++;
-		n *= -1;
-		len--;
+		while ()
 	}
-	while (len)
-	{
-		*(res + i) = (n / ft_up(10, len - 1)) + 48;
-		n %= ft_up(10, len - 1);
-		len--;
-		i++;
-	}
-	*(res + i) = '\0';
-	return (res);
 }
 
 // girilen n integerini string'e donusturuyor

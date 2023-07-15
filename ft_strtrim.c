@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 19:34:29 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/12 16:52:39 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/15 15:36:21 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,19 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len;
-	char	*res;
-	size_t	i;
+	char	*result;
 
-	i = 0;
-	while (*s1 == *(set + i) && *(set + i) && *s1)
-	{
+	while (*s1 && ft_strchr(set, *s1) != 0)
 		s1++;
-		i++;
-	}
-	len = ft_strlen(s1) - 1;
-	while (len && *(s1 + len) == *(set + i) && i)
-	{
+	len = ft_strlen(s1);
+	while (len && s1[len - 1] && ft_strchr(set, s1[len - 1]) != 0)
 		len--;
-		i--;
-	}
-	res = (char *)malloc(sizeof(char) * (len + 1) + 1);
-	if (!res)
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (!result)
 		return (0);
-	ft_memcpy(res, s1, len);
-	res[len + 1] = 0;
-	return (res);
+	ft_memcpy(result, s1, len);
+	result[len] = '\0';
+	return (result);
 }
 
 // s1 dizisinin basında ve sonunda set dizisini
