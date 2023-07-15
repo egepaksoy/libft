@@ -1,9 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/07/15 14:49:25 by epaksoy           #+#    #+#              #
+#    Updated: 2023/07/15 14:49:33 by epaksoy          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 FLAG = -Wall -Wextra -Werror
 SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
 BONUS = $(shell find . -name "ft_lst*.c")
 OBJ = $(SRC:.c=.o)
-BONUSOBJ = $(BONUS:.c=.o)
 
 
 all: $(NAME)
