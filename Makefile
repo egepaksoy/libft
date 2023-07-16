@@ -6,14 +6,14 @@
 #    By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/15 14:49:25 by epaksoy           #+#    #+#              #
-#    Updated: 2023/07/15 15:12:55 by epaksoy          ###   ########.fr        #
+#    Updated: 2023/07/16 15:01:44 by epaksoy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FLAG = -Wall -Wextra -Werror
 SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
-BONUS = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
+BONUS = $(shell find . -name "ft_lst*.c")
 OBJ = $(SRC:.c=.o)
 
 
