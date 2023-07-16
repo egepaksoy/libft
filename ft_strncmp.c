@@ -6,22 +6,24 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 16:24:07 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/15 15:50:37 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/16 16:35:56 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
-	if (n == 0)
-		return (0);
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
+	while (i < n && (s1[i] || s2[i]))
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char )s1[i] - (unsigned char)s2[i]);
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	return (0);
 }
 
 // verilen string'lerin n degerine kadar aynı olup olmadıgını karsılastırıyor

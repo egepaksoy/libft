@@ -6,56 +6,54 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 15:50:24 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/16 14:25:23 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/16 16:23:50 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(int n)
+static int	ft_lennmb(int n, int sign)
 {
-	int	len;
+	int	i;
 
-	len = 0;
-	if (!n)
-		return (1);
-	if (n < 0)
-		len++;
-	while (n)
+	i = 0;
+	if (n == 0)
+		i = 1;
+	while (n != 0)
 	{
-		n /= 10;
-		len++;
+		i++;
+		n = n / 10;
 	}
-	return (len);
+	if (sign < 0)
+		i++;
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*ret;
-	int		len;
-	int		neg;
+	char	*str;
+	long	nmb;
+	int		sign;
+	int		lennmb;
 
-	if (n == -2147483647)
-		return ("-2147483647");
-	if (!n)
-		return ("0");
-	len = ft_numlen(n);
-	neg = 1;
-	if (n < 0)
-		neg = -1;
-	n *= neg;
-	ret = (char *)malloc(sizeof(char) * len + 1);
-	if (!ret)
+	nmb = n;
+	sign = 1;
+	if (nmb < 0)
+		sign = -1;
+	nmb = sign * nmb;
+	lennmb = ft_lennmb(nmb, sign);
+	str = (char *)malloc(sizeof(char) * lennmb + 1);
+	if (!str)
 		return (0);
-	ret[len] = '\0';
-	while (--len >= 0)
+	str[lennmb] = '\0';
+	while (--lennmb >= 0)
 	{
-		ret[len] = (n % 10) + 48;
-		n /= 10;
+		str[lennmb] = (nmb % 10) + '0';
+		nmb = nmb / 10;
 	}
-	if (neg == -1)
-		ret[0] = '-';
-	return (ret);
+	if (sign == -1)
+		str[0] = '-';
+	return (str);
 }
 
 // girilen n integerini string'e donusturuyor
