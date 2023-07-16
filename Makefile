@@ -6,7 +6,7 @@
 #    By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/15 14:49:25 by epaksoy           #+#    #+#              #
-#    Updated: 2023/07/16 15:01:44 by epaksoy          ###   ########.fr        #
+#    Updated: 2023/07/16 16:57:11 by epaksoy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ bonus:
 	gcc $(FLAG) -c $(BONUS)
 	ar rc $(NAME) *.o
 clean:
-	/bin/rm -f  *.o
+	/bin/rm -f *.o
 fclean: clean
 	/bin/rm -f $(NAME)
 re: fclean all
