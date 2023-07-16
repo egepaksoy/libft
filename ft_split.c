@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 22:50:21 by egep              #+#    #+#             */
-/*   Updated: 2023/07/13 19:32:16 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/16 14:26:25 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,4 @@ char	**ft_split(char const *s, char c)
 }
 
 // verilen s stringi içerisinde c char'ına göre ayırıyor
-//TODO: daha bitmedi
+//TODO: tekrar yaz
