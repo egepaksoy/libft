@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 19:34:29 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/15 15:36:21 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/16 17:23:03 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // s1 dizisinin basında ve sonunda set dizisini
 // kesip yeni bir diziye kaydediyor ve onu donduruyor
-//!TODO: Bu koda bak bidaha
