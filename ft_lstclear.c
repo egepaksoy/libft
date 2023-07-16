@@ -6,24 +6,25 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 14:55:20 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/16 15:03:43 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/16 16:15:40 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*tmp;
+	t_list	*ptr;
 
-	if (!lst || !del || !*lst)
+	if (lst == 0 || del == 0)
 		return ;
-	while (lst && *lst)
+	while (*lst != 0)
 	{
-		tmp = (*lst)->next;
+		ptr = (*lst)->next;
 		ft_lstdelone(*lst, del);
-		*lst = tmp;
+		*lst = ptr;
 	}
+	*lst = 0;
 }
 
-// TODO: daha iyi yapılabilir recursivesiz
+// listedeki tum elemanları temizliyor

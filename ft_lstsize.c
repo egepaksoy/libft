@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 15:05:33 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/07/16 15:05:45 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/07/16 16:18:23 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,5 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
+// listedeki baglı listelerin sayısını sayar
